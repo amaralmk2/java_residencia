@@ -1,0 +1,37 @@
+Em Java, você declara uma variável indicando o tipo de dado, seguido pelo
+nome da variável. Aqui está um exemplo simples:
+
+// Declaração de uma variável inteira em Java
+int numero;
+
+// Atribuindo um valor à variável
+numero = 42;
+
+Os tipos de dados primitivos mais usados em Java são:
+
+int: Para armazenar números inteiros.
+double: Para armazenar números de ponto flutuante (com precisão dupla).
+float: Para armazenar números de ponto flutuante (com precisão simples).
+char: Para armazenar caracteres individuais.
+boolean: Para armazenar valores booleanos (verdadeiro ou falso).
+
+
+Em C++, a declaração de variáveis é semelhante, indicando o tipo de dado
+antes do nome da variável:
+
+cpp
+Copy code
+// Declaração de uma variável inteira em C++
+int numero;
+
+// Atribuindo um valor à variável
+numero = 42;
+
+
+Os tipos de dados primitivos mais usados em C++ são semelhantes, mas existem algumas diferenças em termos de precisão e tamanho, dependendo do sistema e compilador. Alguns tipos comuns incluem:
+
+int: Para armazenar números inteiros.
+double: Para armazenar números de ponto flutuante de dupla precisão.
+float: Para armazenar números de ponto flutuante de precisão simples.
+char: Para armazenar caracteres individuais.
+bool: Para armazenar valores booleanos (verdadeiro ou falso).

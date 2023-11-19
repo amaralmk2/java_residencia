@@ -1,0 +1,33 @@
+Em Java, as variáveis de objetos não são ponteiros no sentido direto.
+Em vez disso, as variáveis de objeto armazenam referências aos objetos.
+A gestão de memória é feita automaticamente pelo coletor de lixo (garbage collector) em Java.
+Isso significa que o programador não precisa se preocupar em liberar explicitamente
+a memória alocada para objetos que não são mais necessários. A referência é manipulada automaticamente pelo sistema.
+
+java
+Copy code
+// Exemplo em Java
+MinhaClasse objeto = new MinhaClasse();
+No exemplo acima, objeto é uma referência para um objeto da classe MinhaClasse.
+
+C++:
+Em C++, você pode ter variáveis que são ponteiros, mas nem todas as variáveis são ponteiros.
+Em C++, você tem mais controle sobre a gestão de memória, e é responsabilidade do programador
+alocar e desalocar memória conforme necessário. Ponteiros são usados para referenciar
+diretamente endereços de memória.
+
+cpp
+Copy code
+// Exemplo em C++
+MinhaClasse* objeto = new MinhaClasse();
+No exemplo acima, objeto é um ponteiro para um objeto da classe MinhaClasse, e o programador
+é responsável por liberar a memória alocada usando delete quando não precisar mais desse objeto.
+
+Portanto, embora Java use referências para objetos e gerencie automaticamente a memória, em C++,
+você pode ter variáveis que são ponteiros, e a gestão de memória é mais explícita e manual.
+É importante entender essas diferenças ao programar em cada linguagem.
+
+
+
+
+

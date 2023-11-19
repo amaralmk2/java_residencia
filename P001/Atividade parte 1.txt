@@ -1,0 +1,370 @@
+ATIVIDADE PARTE 01
+
+Em Java, uma classe é uma estrutura fundamental que é usada para organizar e modelar o
+comportamento e os dados de um programa. Ela é uma espécie de planta ou modelo para 
+criar objetos. Uma classe define os atributos (variáveis) e métodos (funções)
+que os objetos criados a partir dela possuirão.
+
+Um objeto, por outro lado, é uma instância específica de uma classe.
+Significa que é uma variável do tipo da classe.
+
+Abaixo segue exemplos em java e em C++
+
+
+1ª EXEMPLO EM C++:
+
+
+#include <iostream>
+#include <string>
+
+class Pessoa {
+public:
+    // Atributos
+    std::string nome;
+    int idade;
+
+    // Construtor
+    Pessoa(std::string nome, int idade) : nome(nome), idade(idade) {}
+
+    // Método para exibir informações
+    void exibirInformacoes() {
+        std::cout << "Nome: " << nome << std::endl;
+        std::cout << "Idade: " << idade << std::endl;
+    }
+};
+
+int main() {
+    // Criando objetos da classe Pessoa
+    Pessoa pessoa1("Alexandre", 25);
+    Pessoa pessoa2("Joana", 30);
+
+    // Chamando o método para exibir informações
+    pessoa1.exibirInformacoes();
+    pessoa2.exibirInformacoes();
+
+    return 0;
+}
+
+
+1ª EXEMPLO EM JAVA:
+
+
+public class Pessoa {
+    // Atributos
+    String nome;
+    int idade;
+
+    // Construtor
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    // Método para exibir informações
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+    }
+
+    public static void main(String[] args) {
+        // Criando objetos da classe Pessoa
+        Pessoa pessoa1 = new Pessoa("Joao", 25);
+        Pessoa pessoa2 = new Pessoa("Maria", 30);
+
+        // Chamando o método para exibir informações
+        pessoa1.exibirInformacoes();
+        pessoa2.exibirInformacoes();
+    }
+}
+
+
+2ª EXEMPLO EM C++:
+
+#include <iostream>
+#include <string>
+
+class Livro {
+public:
+    // Atributos
+    std::string titulo;
+    std::string autor;
+    int numPaginas;
+
+    // Construtor
+    Livro(std::string titulo, std::string autor, int numPaginas) : titulo(titulo), autor(autor), numPaginas(numPaginas) {}
+
+    // Método para exibir informações
+    void exibirInformacoes() {
+        std::cout << "Título: " << titulo << std::endl;
+        std::cout << "Autor: " << autor << std::endl;
+        std::cout << "Número de Páginas: " << numPaginas << std::endl;
+    }
+};
+
+int main() {
+    // Criando objetos da classe Livro
+    Livro livro1("Aventuras na Floresta", "Carlos Silva", 200);
+    Livro livro2("Programação em C++", "Ana Souza", 350);
+
+    // Chamando o método para exibir informações
+    livro1.exibirInformacoes();
+    livro2.exibirInformacoes();
+
+    return 0;
+}
+
+2ª EXEMPLO EM JAVA:
+
+public class Livro {
+    // Atributos
+    String titulo;
+    String autor;
+    int numPaginas;
+
+    // Construtor
+    public Livro(String titulo, String autor, int numPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numPaginas = numPaginas;
+    }
+
+    // Método para exibir informações
+    public void exibirInformacoes() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Número de Páginas: " + numPaginas);
+    }
+
+    public static void main(String[] args) {
+        // Criando objetos da classe Livro
+        Livro livro1 = new Livro("Aventuras na Floresta", "Carlos Silva", 200);
+        Livro livro2 = new Livro("Programação em Java", "Ana Souza", 350);
+
+        // Chamando o método para exibir informações
+        livro1.exibirInformacoes();
+        livro2.exibirInformacoes();
+    }
+}
+
+3ª EXEMPLO EM C++:
+
+#include <iostream>
+#include <cmath>
+
+class Circulo {
+public:
+    // Atributos
+    double raio;
+
+    // Construtor
+    Circulo(double raio) : raio(raio) {}
+
+    // Método para calcular a área
+    double calcularArea() {
+        return M_PI * raio * raio;
+    }
+
+    // Método para calcular o perímetro
+    double calcularPerimetro() {
+        return 2 * M_PI * raio;
+    }
+};
+
+int main() {
+    // Criando objetos da classe Circulo
+    Circulo circulo1(5.0);
+    Circulo circulo2(3.5);
+
+    // Calculando e exibindo a área e o perímetro
+    std::cout << "Circulo 1 - Area: " << circulo1.calcularArea() << ", Perimetro: " << circulo1.calcularPerimetro() << std::endl;
+    std::cout << "Circulo 2 - Area: " << circulo2.calcularArea() << ", Perimetro: " << circulo2.calcularPerimetro() << std::endl;
+
+    return 0;
+}
+
+3ª EXEMPLO EM JAVA:
+
+public class Circulo {
+    // Atributos
+    double raio;
+
+    // Construtor
+    public Circulo(double raio) {
+        this.raio = raio;
+    }
+
+    // Método para calcular a área
+    public double calcularArea() {
+        return Math.PI * raio * raio;
+    }
+
+    // Método para calcular o perímetro
+    public double calcularPerimetro() {
+        return 2 * Math.PI * raio;
+    }
+
+    public static void main(String[] args) {
+        // Criando objetos da classe Circulo
+        Circulo circulo1 = new Circulo(5.0);
+        Circulo circulo2 = new Circulo(3.5);
+
+        // Calculando e exibindo a área e o perímetro
+        System.out.println("Circulo 1 - Area: " + circulo1.calcularArea() + ", Perimetro: " + circulo1.calcularPerimetro());
+        System.out.println("Circulo 2 - Area: " + circulo2.calcularArea() + ", Perimetro: " + circulo2.calcularPerimetro());
+    }
+}
+
+4ª EXEMPLO EM C++:
+
+#include <iostream>
+
+class ContaBancaria {
+public:
+    // Atributos
+    int numeroConta;
+    double saldo;
+
+    // Construtor
+    ContaBancaria(int numeroConta, double saldo) : numeroConta(numeroConta), saldo(saldo) {}
+
+    // Método para depositar dinheiro
+    void depositar(double valor) {
+        saldo += valor;
+        std::cout << "Depósito de $" << valor << " realizado. Novo saldo: $" << saldo << std::endl;
+    }
+
+    // Método para sacar dinheiro
+    void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            std::cout << "Saque de $" << valor << " realizado. Novo saldo: $" << saldo << std::endl;
+        } else {
+            std::cout << "Saldo insuficiente para saque." << std::endl;
+        }
+    }
+};
+
+int main() {
+    // Criando objetos da classe ContaBancaria
+    ContaBancaria conta1(12345, 1000.0);
+    ContaBancaria conta2(67890, 500.0);
+
+    // Realizando operações de depósito e saque
+    conta1.depositar(200.0);
+    conta2.sacar(100.0);
+
+    return 0;
+}
+
+
+4ª EXEMPLO EM JAVA:
+
+public class ContaBancaria {
+    // Atributos
+    int numeroConta;
+    double saldo;
+
+    // Construtor
+    public ContaBancaria(int numeroConta, double saldo) {
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+    }
+
+    // Método para depositar dinheiro
+    public void depositar(double valor) {
+        saldo += valor;
+        System.out.println("Depósito de $" + valor + " realizado. Novo saldo: $" + saldo);
+    }
+
+    // Método para sacar dinheiro
+    public void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de $" + valor + " realizado. Novo saldo: $" + saldo);
+        } else {
+            System.out.println("Saldo insuficiente para saque.");
+        }
+    }
+
+    public static void main(String[] args) {
+        // Criando objetos da classe ContaBancaria
+        ContaBancaria conta1 = new ContaBancaria(12345, 1000.0);
+        ContaBancaria conta2 = new ContaBancaria(67890, 500.0);
+
+        // Realizando operações de depósito e saque
+        conta1.depositar(200.0);
+        conta2.sacar(100.0);
+    }
+}
+
+5ª EXEMPLO EM C++:
+
+#include <iostream>
+#include <cmath>
+
+class Triangulo {
+public:
+    // Atributos
+    double lado1, lado2, lado3;
+
+    // Construtor
+    Triangulo(double l1, double l2, double l3) : lado1(l1), lado2(l2), lado3(l3) {}
+
+    // Método para calcular a área usando a fórmula de Herão
+    double calcularArea() {
+        double s = (lado1 + lado2 + lado3) / 2.0;
+        return sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
+    }
+
+    // Método para calcular o perímetro
+    double calcularPerimetro() {
+        return lado1 + lado2 + lado3;
+    }
+};
+
+int main() {
+    // Criando objetos da classe Triangulo
+    Triangulo triangulo1(3.0, 4.0, 5.0);
+    Triangulo triangulo2(5.0, 12.0, 13.0);
+
+    // Calculando e exibindo a área e o perímetro
+    std::cout << "Triângulo 1 - Área: " << triangulo1.calcularArea() << ", Perímetro: " << triangulo1.calcularPerimetro() << std::endl;
+    std::cout << "Triângulo 2 - Área: " << triangulo2.calcularArea() << ", Perímetro: " << triangulo2.calcularPerimetro() << std::endl;
+
+    return 0;
+}
+
+5ª EXEMPLO EM JAVA:
+
+public class Triangulo {
+    // Atributos
+    double lado1, lado2, lado3;
+
+    // Construtor
+    public Triangulo(double l1, double l2, double l3) {
+        this.lado1 = l1;
+        this.lado2 = l2;
+        this.lado3 = l3;
+    }
+
+    // Método para calcular a área usando a fórmula de Herão
+    public double calcularArea() {
+        double s = (lado1 + lado2 + lado3) / 2.0;
+        return Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
+    }
+
+    // Método para calcular o perímetro
+    public double calcularPerimetro() {
+        return lado1 + lado2 + lado3;
+    }
+
+    public static void main(String[] args) {
+        // Criando objetos da classe Triangulo
+        Triangulo triangulo1 = new Triangulo(3.0, 4.0, 5.0);
+        Triangulo triangulo2 = new Triangulo(5.0, 12.0, 13.0);
+
+        // Calculando e exibindo a área e o perímetro
+        System.out.println("Triângulo 1 - Área: " + triangulo1.calcularArea() + ", Perímetro: " + triangulo1.calcularPerimetro());
+        System.out.println("Triângulo 2 - Área: " + triangulo2.calcularArea() + ", Perímetro: " + triangulo2.calcularPerimetro());
+    }
+}

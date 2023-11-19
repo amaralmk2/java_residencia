@@ -1,0 +1,182 @@
+Em Java, a herança é um conceito que permite criar uma nova classe (subclasse)
+baseada em uma classe existente (superclasse). A subclasse herda os atributos e métodos 
+da superclasse, o que promove a reutilização de código e facilita a criação de hierarquias
+de classes.
+
+EXEMPLO JAVA: 
+
+public class AnimalModificado {
+    public void fazerSom() {
+        System.out.println("Som genérico de animal");
+    }
+}
+
+public class CachorroModificado extends AnimalModificado {
+    public void latir() {
+        System.out.println("Latindo...");
+    }
+}
+
+EXEMPLO C++
+
+class AnimalModificado {
+public:
+    void fazerSom() {
+        cout << "Som genérico de animal" << endl;
+    }
+};
+
+class CachorroModificado : public AnimalModificado {
+public:
+    void latir() {
+        cout << "Latindo..." << endl;
+    }
+};
+
+2ª EXEMPLO JAVA:
+
+class FormaModificada {
+    void desenhar() {
+        System.out.println("Desenhando uma forma");
+    }
+}
+
+class CirculoModificado extends FormaModificada {
+    @Override
+    void desenhar() {
+        System.out.println("Desenhando um círculo");
+    }
+}
+
+2ª EXEMPLO C++:
+
+class FormaModificada {
+public:
+    virtual void desenhar() {
+        cout << "Desenhando uma forma" << endl;
+    }
+};
+
+class CirculoModificado : public FormaModificada {
+public:
+    void desenhar() override {
+        cout << "Desenhando um círculo" << endl;
+    }
+};
+
+3ª EXEMPLO JAVA:
+
+public class PessoaModificada {
+    private String nome;
+    private String cpf;
+
+    public String getNome() {
+        return nome;
+    }
+}
+
+public class FuncionarioModificado extends PessoaModificada {
+    @Override
+    public String getNome() {
+        return super.getNome(); // Você pode adicionar lógica específica se necessário
+    }
+}
+
+3ª EXEMPLO C++:
+
+class PessoaModificada {
+private:
+    string nome;
+    string cpf;
+
+public:
+    string getNome() {
+        return nome;
+    }
+};
+
+class FuncionarioModificado : public PessoaModificada {
+public:
+    string getNome() {
+        return PessoaModificada::getNome(); // Você pode adicionar lógica específica se necessário
+    }
+};
+
+4ª EXEMPLO JAVA:
+
+public class AutomovelModificado {
+    private String marca;
+    private String modelo;
+
+    public void acelerar() {
+        System.out.println("Acelerando...");
+    }
+}
+
+public class CarroModificado extends AutomovelModificado {
+    @Override
+    public void acelerar() {
+        System.out.println("Acelerando o carro...");
+    }
+}
+
+4ª EXEMPLO EM C++:
+
+class AutomovelModificado {
+private:
+    string marca;
+    string modelo;
+
+public:
+    void acelerar() {
+        cout << "Acelerando..." << endl;
+    }
+};
+
+class CarroModificado : public AutomovelModificado {
+public:
+    void acelerar() override {
+        cout << "Acelerando o carro..." << endl;
+    }
+};
+
+5ª EXEMPLO EM JAVA:
+
+// Superclasse
+public class Veiculo {
+    public void acelerar() {
+        System.out.println("Acelerando...");
+    }
+}
+
+// Subclasse 1
+public class Carro extends Veiculo {
+    // Pode adicionar métodos específicos para Carro, se necessário
+}
+
+// Subclasse 2
+public class Moto extends Veiculo {
+    // Pode adicionar métodos específicos para Moto, se necessário
+}
+
+5ª EXEMPLO EM C++:
+
+#include <iostream>
+
+// Superclasse
+class Veiculo {
+public:
+    void acelerar() {
+        std::cout << "Acelerando..." << std::endl;
+    }
+};
+
+// Subclasse 1
+class Carro : public Veiculo {
+    // Pode adicionar métodos específicos para Carro, se necessário
+};
+
+// Subclasse 2
+class Moto : public Veiculo {
+    // Pode adicionar métodos específicos para Moto, se necessário
+};
