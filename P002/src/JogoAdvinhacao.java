@@ -33,9 +33,15 @@ public class JogoAdvinhacao {
     }
 
 
-
-
     public static void main(String[] args) {
-      
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bem-vindo ao Jogo de Adivinhação!");
+
+        JogoAdvinhacao jogo = new JogoAdvinhacao();
+
+        jogo.iniciarJogo(scanner);
+
+        scanner.close();
     }
 }
